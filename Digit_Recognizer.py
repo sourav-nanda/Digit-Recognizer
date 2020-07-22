@@ -1,7 +1,7 @@
 from tensorflow.keras.models import load_model
 import gradio as gr
 
-model_l=load_model('https://github.com/sourav-nanda/Digit-Recognizer/blob/master/digit_model_deepnote.h5')
+model_l=load_model('digit_model_deepnote.h5')
 
 def digit_classifier(image):
     image=image.reshape(1,28,28,1)
