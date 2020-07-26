@@ -14,5 +14,6 @@ interface=gr.Interface(fn=digit_classifier,
                        live=True,
                        capture_session=True,
                        title='Handwritten Digit Recognizer',
-                       description='Write any digit and see the predictions in terms of labels')
+                       description='Write any digit and see the predictions in terms of labels',
+                       server_name="0.0.0.0")
 interface.launch(share=True)
