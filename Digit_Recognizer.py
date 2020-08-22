@@ -5,8 +5,12 @@ model_l=load_model('digit_model_deepnote.h5')
 
 def digit_classifier(image):
     image=image.reshape(1,28,28,1)
-    pred=model_l.predict_classes(image)[0]
-    return str(pred)
+    pred=model_l.predict(image).flatten()
+    labels=[j for j in range(10)]
+    return {labels[i]: float(pred[i]) for i in range(10)}
+
+if __name__ == '__main__':
+	digit_classifier(image)
 
 interface=gr.Interface(fn=digit_classifier,
                        inputs=gr.inputs.Sketchpad(shape=(28,28)),
