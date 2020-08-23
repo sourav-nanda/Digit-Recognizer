@@ -9,8 +9,7 @@ def digit_classifier(image):
     labels=[j for j in range(10)]
     return {labels[i]: float(pred[i]) for i in range(10)}
 
-if __name__ == '__main__':
-	digit_classifier(image)
+
 
 interface=gr.Interface(fn=digit_classifier,
                        inputs=gr.inputs.Sketchpad(shape=(28,28)),
@@ -20,4 +19,5 @@ interface=gr.Interface(fn=digit_classifier,
                        title='Handwritten Digit Recognizer',
                        description='Write any digit and see the predictions in terms of labels',
                        server_name="0.0.0.0")
+
 interface.launch(share=True)
