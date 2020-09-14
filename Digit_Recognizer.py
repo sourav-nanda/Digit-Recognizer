@@ -20,4 +20,5 @@ interface=gr.Interface(fn=digit_classifier,
                        description='Write any digit and see the predictions in terms of labels',
                        server_name="0.0.0.0")
 
-interface.launch(share=True)
+if __name__ == '__main__':
+    interface.launch()
