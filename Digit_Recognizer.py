@@ -19,6 +19,6 @@ interface=gr.Interface(fn=digit_classifier,
                        title='Handwritten Digit Recognizer',
                        description='Write any digit and see the predictions in terms of labels',
                        server_name="0.0.0.0")
-
+interface.launch()
 if __name__ == '__main__':
-    interface.launch()
+    main()
