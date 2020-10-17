@@ -1,1 +1,1 @@
-[https://rocky-badlands-70645.herokuapp.com/](Tap to open app)
+[Digit Recognizer](https://rocky-badlands-70645.herokuapp.com/)
